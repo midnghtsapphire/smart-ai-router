@@ -1,0 +1,95 @@
+{
+  "version": "2.0",
+  "openrouter_api_key": "YOUR_OPENROUTER_KEY",
+  
+  "models": {
+    "framework": {
+      "alias": "Framework Builder (Premium)",
+      "provider": "openrouter",
+      "preset": "framework-builder",
+      "description": "For core CLI/MCP/framework development - invest here"
+    },
+    
+    "creative": {
+      "alias": "Creative Generator (Free→Paid)",
+      "provider": "openrouter",
+      "preset": "creative-ideation",
+      "description": "Blue ocean ideas, inventions - starts free, falls back to paid"
+    },
+    
+    "review": {
+      "alias": "Code Reviewer (Free→Paid)",
+      "provider": "openrouter",
+      "preset": "code-reviewer",
+      "description": "Code review and improvements - cost-optimized"
+    },
+    
+    "test": {
+      "alias": "Production Tester",
+      "provider": "openrouter",
+      "preset": "production-tester",
+      "description": "Live code testing and validation"
+    },
+    
+    "kimi": {
+      "alias": "Kimi K2.5",
+      "provider": "openrouter",
+      "model": "moonshot/kimi-k2.5",
+      "description": "Your current Kimi implementation"
+    },
+    
+    "venice": {
+      "alias": "Venice Uncensored",
+      "provider": "openrouter", 
+      "model": "cognitivecomputations/dolphin-mistral-24b-venice-edition:free",
+      "description": "Your current Venice code review"
+    },
+    
+    "auto-free": {
+      "alias": "Auto Free Router",
+      "provider": "openrouter",
+      "model": "openrouter/free",
+      "description": "Automatic free model selection"
+    }
+  },
+  
+  "workflows": {
+    "framework-dev": {
+      "steps": [
+        {"model": "framework", "role": "architect"},
+        {"model": "review", "role": "reviewer"},
+        {"model": "test", "role": "validator"}
+      ]
+    },
+    
+    "app-creation": {
+      "steps": [
+        {"model": "creative", "role": "ideation"},
+        {"model": "kimi", "role": "implementation"},
+        {"model": "venice", "role": "review"},
+        {"model": "review", "role": "final-check"}
+      ]
+    },
+    
+    "production-deploy": {
+      "steps": [
+        {"model": "review", "role": "static-analysis"},
+        {"model": "test", "role": "integration-test"},
+        {"model": "framework", "role": "final-validation"}
+      ]
+    }
+  },
+  
+  "rate_limit_handling": {
+    "retry_delay": 2,
+    "max_retries": 3,
+    "fallback_on_rate_limit": true,
+    "log_fallbacks": true
+  },
+  
+  "cost_tracking": {
+    "enabled": true,
+    "alert_threshold": 50.00,
+    "monthly_budget": 200.00
+  }
+}
