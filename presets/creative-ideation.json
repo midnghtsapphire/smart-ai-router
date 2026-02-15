@@ -2,7 +2,10 @@
   "name": "creative-ideation",
   "model": "arcee-ai/trinity-large-preview:free",
   "models": [
+    "arcee-ai/mimo-v2-flash:free",
     "cognitivecomputations/dolphin-mistral-24b-venice-edition:free",
+    "meta-llama/llama-3.3-70b-instruct:free",
+    "nousresearch/hermes-3-llama-3.1-405b:free",
     "nothingiisreal/nemo-12b",
     "deepseek/deepseek-v3.2:free",
     "deepseek/deepseek-v3.2",

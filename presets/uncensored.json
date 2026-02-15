@@ -1,0 +1,17 @@
+{
+  "name": "uncensored",
+  "model": "cognitivecomputations/dolphin-mistral-24b-venice-edition:free",
+  "models": [
+    "nousresearch/hermes-3-llama-3.1-405b:free",
+    "arcee-ai/mimo-v2-flash:free",
+    "nothingiisreal/nemo-12b",
+    "deepseek/deepseek-v3.2"
+  ],
+  "temperature": 0.9,
+  "max_tokens": 6000,
+  "provider": {
+    "sort": "price",
+    "allow_fallbacks": true,
+    "require_parameters": false
+  }
+}

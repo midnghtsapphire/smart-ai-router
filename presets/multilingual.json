@@ -1,0 +1,17 @@
+{
+  "name": "multilingual",
+  "model": "qwen/qwen3-235b-a22b",
+  "models": [
+    "moonshot/kimi-k2",
+    "google/gemini-2.5-pro-preview",
+    "anthropic/claude-opus-4.6",
+    "deepseek/deepseek-v3.2"
+  ],
+  "temperature": 0.5,
+  "max_tokens": 5000,
+  "provider": {
+    "sort": "price",
+    "allow_fallbacks": true,
+    "require_parameters": false
+  }
+}

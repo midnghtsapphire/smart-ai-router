@@ -1,0 +1,16 @@
+{
+  "name": "fast-iteration",
+  "model": "x-ai/grok-code-fast-1",
+  "models": [
+    "meta-llama/llama-3.3-70b-instruct:free",
+    "deepseek/deepseek-v3.2:free",
+    "x-ai/grok-3-mini"
+  ],
+  "temperature": 0.25,
+  "max_tokens": 3000,
+  "provider": {
+    "sort": "latency",
+    "allow_fallbacks": true,
+    "require_parameters": false
+  }
+}
